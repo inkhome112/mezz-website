@@ -10,6 +10,7 @@ import Link from 'next/link';
 export default function ProjectGrid({ projects = [] }) {
   const [activeCategory, setActiveCategory] = useState('All');
   const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const categories = ['All', 'Residential', 'Hospitality', 'Childcare'];
@@ -21,8 +22,9 @@ export default function ProjectGrid({ projects = [] }) {
           (p) => p.category.toLowerCase() === activeCategory.toLowerCase()
         );
 
-  const handleOpenLightbox = (project) => {
+  const handleOpenLightbox = (project, idx = 0) => {
     setSelectedProject(project);
+    setSelectedPhotoIndex(idx);
     setLightboxOpen(true);
   };
 
@@ -104,6 +106,7 @@ export default function ProjectGrid({ projects = [] }) {
       {/* Full-Screen Lightbox Modal */}
       <LightboxModal
         project={selectedProject}
+        initialIndex={selectedPhotoIndex}
         isOpen={lightboxOpen}
         onClose={() => setLightboxOpen(false)}
       />

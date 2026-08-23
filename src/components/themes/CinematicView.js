@@ -9,6 +9,7 @@ import LightboxModal from '../LightboxModal';
 export default function CinematicView({ projects = [], company }) {
   const [slideIndex, setSlideIndex] = useState(0);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const heroSlides = projects.slice(0, 4);
@@ -21,8 +22,9 @@ export default function CinematicView({ projects = [], company }) {
     setSlideIndex((prev) => (prev === 0 ? heroSlides.length - 1 : prev - 1));
   };
 
-  const handleOpenLightbox = (p) => {
+  const handleOpenLightbox = (p, idx = 0) => {
     setSelectedProject(p);
+    setSelectedPhotoIndex(idx);
     setLightboxOpen(true);
   };
 
@@ -175,6 +177,7 @@ export default function CinematicView({ projects = [], company }) {
       {/* Lightbox */}
       <LightboxModal
         project={selectedProject}
+        initialIndex={selectedPhotoIndex}
         isOpen={lightboxOpen}
         onClose={() => setLightboxOpen(false)}
       />

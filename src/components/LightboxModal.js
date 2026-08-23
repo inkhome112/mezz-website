@@ -2,14 +2,21 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight, Maximize2, MapPin, Calendar, Building } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Maximize2, MapPin, Calendar, Building, ImageOff } from 'lucide-react';
 
 export default function LightboxModal({ project, initialIndex = 0, isOpen, onClose }) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
+  const [imageError, setImageError] = useState(false);
 
+  // Reset index whenever the project, initialIndex, or modal open state changes
   useEffect(() => {
-    setCurrentIndex(initialIndex);
-  }, [initialIndex]);
+    if (isOpen && project) {
+      const startingIdx = typeof initialIndex === 'number' ? initialIndex : 0;
+      const maxIdx = (project.images?.length || 1) - 1;
+      setCurrentIndex(Math.min(Math.max(0, startingIdx), maxIdx));
+      setImageError(false);
+    }
+  }, [project?.id, initialIndex, isOpen]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -25,15 +32,19 @@ export default function LightboxModal({ project, initialIndex = 0, isOpen, onClo
   if (!project || !project.images || project.images.length === 0) return null;
 
   const images = project.images;
+  const safeIndex = Math.min(Math.max(0, currentIndex), images.length - 1);
+  const activeImage = images[safeIndex] || images[0] || '';
 
   const handlePrev = (e) => {
     e?.stopPropagation();
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setImageError(false);
+    setCurrentIndex((prev) => (prev <= 0 ? images.length - 1 : prev - 1));
   };
 
   const handleNext = (e) => {
     e?.stopPropagation();
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setImageError(false);
+    setCurrentIndex((prev) => (prev >= images.length - 1 ? 0 : prev + 1));
   };
 
   return (
@@ -43,7 +54,7 @@ export default function LightboxModal({ project, initialIndex = 0, isOpen, onClo
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.25 }}
           className="fixed inset-0 z-50 bg-black/95 backdrop-blur-2xl flex flex-col justify-between p-4 md:p-8"
           onClick={onClose}
         >
@@ -59,7 +70,7 @@ export default function LightboxModal({ project, initialIndex = 0, isOpen, onClo
                 </span>
                 <span className="text-xs text-neutral-500">•</span>
                 <span className="text-xs text-neutral-400">
-                  Photo {currentIndex + 1} of {images.length}
+                  Photo {safeIndex + 1} of {images.length}
                 </span>
               </div>
               <h3 className="text-xl md:text-2xl font-serif text-white mt-0.5">
@@ -82,38 +93,50 @@ export default function LightboxModal({ project, initialIndex = 0, isOpen, onClo
             onClick={(e) => e.stopPropagation()}
           >
             {/* Prev Button */}
-            <button
-              onClick={handlePrev}
-              className="absolute left-2 md:left-6 z-30 p-3 md:p-4 rounded-full bg-black/60 border border-white/10 hover:border-[#C5A880] text-white backdrop-blur-md transition-all hover:scale-110"
-              aria-label="Previous Image"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
+            {images.length > 1 && (
+              <button
+                onClick={handlePrev}
+                className="absolute left-2 md:left-6 z-30 p-3 md:p-4 rounded-full bg-black/60 border border-white/10 hover:border-[#C5A880] text-white backdrop-blur-md transition-all hover:scale-110"
+                aria-label="Previous Image"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+            )}
 
             {/* Next Button */}
-            <button
-              onClick={handleNext}
-              className="absolute right-2 md:right-6 z-30 p-3 md:p-4 rounded-full bg-black/60 border border-white/10 hover:border-[#C5A880] text-white backdrop-blur-md transition-all hover:scale-110"
-              aria-label="Next Image"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
+            {images.length > 1 && (
+              <button
+                onClick={handleNext}
+                className="absolute right-2 md:right-6 z-30 p-3 md:p-4 rounded-full bg-black/60 border border-white/10 hover:border-[#C5A880] text-white backdrop-blur-md transition-all hover:scale-110"
+                aria-label="Next Image"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            )}
 
             {/* Active Image with Animation */}
             <AnimatePresence mode="wait">
               <motion.div
-                key={currentIndex}
-                initial={{ opacity: 0, scale: 0.96 }}
+                key={`${project.id}-${safeIndex}`}
+                initial={{ opacity: 0, scale: 0.97 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 1.02 }}
-                transition={{ duration: 0.35, ease: 'easeOut' }}
+                transition={{ duration: 0.3, ease: 'easeOut' }}
                 className="relative max-w-full max-h-[70vh] flex items-center justify-center"
               >
-                <img
-                  src={images[currentIndex]}
-                  alt={`${project.title} - photo ${currentIndex + 1}`}
-                  className="max-h-[68vh] max-w-full object-contain rounded-lg shadow-2xl border border-white/5"
-                />
+                {imageError ? (
+                  <div className="w-96 h-64 rounded-2xl glass-panel border border-neutral-800 flex flex-col items-center justify-center text-neutral-400 gap-3">
+                    <ImageOff className="w-8 h-8 text-[#C5A880]" />
+                    <span className="text-xs">Photo loading error</span>
+                  </div>
+                ) : (
+                  <img
+                    src={encodeURI(activeImage)}
+                    alt={`${project.title} - photo ${safeIndex + 1}`}
+                    onError={() => setImageError(true)}
+                    className="max-h-[68vh] max-w-full object-contain rounded-lg shadow-2xl border border-white/5"
+                  />
+                )}
               </motion.div>
             </AnimatePresence>
           </div>
@@ -150,15 +173,18 @@ export default function LightboxModal({ project, initialIndex = 0, isOpen, onClo
               {images.map((img, idx) => (
                 <button
                   key={idx}
-                  onClick={() => setCurrentIndex(idx)}
+                  onClick={() => {
+                    setImageError(false);
+                    setCurrentIndex(idx);
+                  }}
                   className={`relative w-14 h-10 md:w-16 md:h-12 flex-shrink-0 rounded-md overflow-hidden border-2 transition-all ${
-                    idx === currentIndex
+                    idx === safeIndex
                       ? 'border-[#C5A880] scale-105 opacity-100'
                       : 'border-transparent opacity-40 hover:opacity-80'
                   }`}
                 >
                   <img
-                    src={img}
+                    src={encodeURI(img)}
                     alt="thumbnail"
                     className="w-full h-full object-cover"
                   />

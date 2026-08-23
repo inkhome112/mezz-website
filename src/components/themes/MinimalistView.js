@@ -9,6 +9,7 @@ import LightboxModal from '../LightboxModal';
 export default function MinimalistView({ projects = [], company }) {
   const [activeTab, setActiveTab] = useState('All');
   const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const categories = ['All', 'Residential', 'Hospitality', 'Childcare'];
@@ -18,8 +19,9 @@ export default function MinimalistView({ projects = [], company }) {
       ? projects
       : projects.filter((p) => p.category.toLowerCase() === activeTab.toLowerCase());
 
-  const handleOpenLightbox = (p) => {
+  const handleOpenLightbox = (p, idx = 0) => {
     setSelectedProject(p);
+    setSelectedPhotoIndex(idx);
     setLightboxOpen(true);
   };
 
@@ -212,6 +214,7 @@ export default function MinimalistView({ projects = [], company }) {
       {/* Lightbox Modal */}
       <LightboxModal
         project={selectedProject}
+        initialIndex={selectedPhotoIndex}
         isOpen={lightboxOpen}
         onClose={() => setLightboxOpen(false)}
       />
