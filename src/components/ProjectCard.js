@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Images, ArrowUpRight, Calendar, Sparkles } from 'lucide-react';
+import { MapPin, Images, ArrowUpRight, Calendar, Sparkles, Eye } from 'lucide-react';
 import Link from 'next/link';
 
 export default function ProjectCard({ project, onOpenLightbox }) {
@@ -31,29 +31,31 @@ export default function ProjectCard({ project, onOpenLightbox }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Visual Image Container with Curtain Reveal */}
-      <div
-        className="relative h-80 sm:h-96 w-full overflow-hidden cursor-pointer"
-        onClick={() => onOpenLightbox(project)}
-      >
-        <img
-          src={project.heroImage}
-          alt={project.title}
-          className="w-full h-full object-cover object-center transition-transform duration-1000 cubic-bezier(0.16, 1, 0.3, 1) group-hover:scale-108 filter brightness-[0.9] group-hover:brightness-100"
-        />
-
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+      {/* Visual Image Container */}
+      <div className="relative h-80 sm:h-96 w-full overflow-hidden">
+        <Link href={`/projects/${project.slug}`} className="block w-full h-full">
+          <img
+            src={project.heroImage}
+            alt={project.title}
+            className="w-full h-full object-cover object-center transition-transform duration-1000 cubic-bezier(0.16, 1, 0.3, 1) group-hover:scale-108 filter brightness-[0.9] group-hover:brightness-100"
+          />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+        </Link>
 
         {/* Top Badges */}
         <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
           <span className="px-3.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[#DFC29A] text-[11px] uppercase tracking-[0.2em] font-medium">
             {project.category}
           </span>
-          <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-neutral-300 text-xs flex items-center gap-1.5">
+          <button
+            onClick={() => onOpenLightbox(project, 0)}
+            className="px-3 py-1 rounded-full bg-black/70 hover:bg-black backdrop-blur-md border border-white/15 hover:border-[#C5A880] text-neutral-300 hover:text-white text-xs flex items-center gap-1.5 transition-all"
+            title="Open Quick Photo Lightbox"
+          >
             <Images className="w-3.5 h-3.5 text-[#C5A880]" />
-            {imageCount} Photos
-          </span>
+            <span>{imageCount} Photos</span>
+          </button>
         </div>
 
         {/* Floating Magnetic Hover Indicator */}
@@ -67,12 +69,12 @@ export default function ProjectCard({ project, onOpenLightbox }) {
           transition={{ type: 'spring', damping: 25, stiffness: 250 }}
           className="pointer-events-none absolute top-0 left-0 z-30 hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-[#C5A880] text-black font-medium text-xs tracking-wider uppercase shadow-2xl"
         >
-          <span>View Gallery</span>
+          <span>Explore Details</span>
           <ArrowUpRight className="w-3.5 h-3.5" />
         </motion.div>
 
         {/* Bottom Card Title Overlay */}
-        <div className="absolute bottom-4 left-5 right-5 z-10">
+        <div className="absolute bottom-4 left-5 right-5 z-10 pointer-events-none">
           <div className="text-xs uppercase tracking-widest text-[#DFC29A] font-light mb-1">
             {project.subtitle}
           </div>
@@ -101,22 +103,24 @@ export default function ProjectCard({ project, onOpenLightbox }) {
           </div>
         </div>
 
-        {/* Action Bar */}
-        <div className="mt-5 pt-3 flex items-center justify-between">
-          <button
-            onClick={() => onOpenLightbox(project)}
-            className="text-xs uppercase tracking-[0.15em] text-[#C5A880] hover:text-[#DFC29A] flex items-center gap-1.5 font-medium transition-colors"
-          >
-            <span>Inspect Photos</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </button>
-
+        {/* Prominent Two-Tier Action Bar */}
+        <div className="mt-6 pt-4 border-t border-white/5 flex items-center gap-3">
           <Link
             href={`/projects/${project.slug}`}
-            className="text-xs text-neutral-500 hover:text-neutral-300 transition-colors"
+            className="flex-1 py-3 px-4 rounded-xl bg-[#C5A880] hover:bg-[#DFC29A] text-black font-medium text-xs tracking-[0.15em] uppercase text-center flex items-center justify-center gap-1.5 transition-all shadow-lg shadow-[#C5A880]/15 hover:shadow-[#C5A880]/30 hover:scale-[1.01]"
           >
-            Project Details →
+            <span>View Project Details</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
           </Link>
+
+          <button
+            onClick={() => onOpenLightbox(project, 0)}
+            className="p-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 border border-neutral-700/80 hover:border-[#C5A880] text-neutral-300 hover:text-white text-xs flex items-center gap-1.5 transition-all flex-shrink-0"
+            title="Open Quick Photo Gallery"
+          >
+            <Images className="w-4 h-4 text-[#C5A880]" />
+            <span className="hidden sm:inline">Gallery</span>
+          </button>
         </div>
       </div>
     </motion.div>

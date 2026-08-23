@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpRight, MapPin, Calendar, LayoutDashboard, Plus, ChevronRight, Sparkles } from 'lucide-react';
+import { ArrowUpRight, MapPin, Calendar, LayoutDashboard, Plus, ChevronRight, Sparkles, Images } from 'lucide-react';
 import LightboxModal from '../LightboxModal';
 
 export default function MinimalistView({ projects = [], company }) {
@@ -84,27 +84,36 @@ export default function MinimalistView({ projects = [], company }) {
               >
                 View Works
               </a>
-              <a
-                href="#about"
-                className="px-8 py-3.5 rounded-full border border-neutral-300 text-neutral-800 text-xs uppercase tracking-[0.2em] font-medium hover:border-black transition-colors"
+              <Link
+                href={`/projects/${projects[0]?.slug || 'ivori'}`}
+                className="px-8 py-3.5 rounded-full border border-neutral-300 text-neutral-800 text-xs uppercase tracking-[0.2em] font-medium hover:border-black transition-colors flex items-center gap-1.5"
               >
-                About Studio
-              </a>
+                <span>Featured Project</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
           </div>
 
           <div className="lg:col-span-5 relative">
-            <div className="relative h-[480px] rounded-2xl overflow-hidden shadow-2xl border border-neutral-200">
+            <Link
+              href={`/projects/${projects[0]?.slug || 'ivori'}`}
+              className="block relative h-[480px] rounded-2xl overflow-hidden shadow-2xl border border-neutral-200 group"
+            >
               <img
                 src={projects[0]?.heroImage || 'https://www.mezzgroup.com.au/wp-content/uploads/2022/05/ivori-living-closeup-5K-edited.jpg'}
                 alt="Mezz Architecture"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-neutral-200">
-                <span className="text-[10px] uppercase tracking-widest text-neutral-500">Featured Project</span>
-                <div className="text-base font-serif text-black font-medium">{projects[0]?.title} — {projects[0]?.location}</div>
+              <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-neutral-200 flex items-center justify-between">
+                <div>
+                  <span className="text-[10px] uppercase tracking-widest text-neutral-500">Featured Project</span>
+                  <div className="text-base font-serif text-black font-medium">{projects[0]?.title} — {projects[0]?.location}</div>
+                </div>
+                <div className="p-2 rounded-full bg-black text-white group-hover:scale-110 transition-transform">
+                  <ArrowUpRight className="w-4 h-4" />
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -148,7 +157,7 @@ export default function MinimalistView({ projects = [], company }) {
         </div>
 
         {/* Minimalist 2-Column Large Editorial Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {filtered.map((proj, idx) => (
             <motion.div
               key={proj.id}
@@ -156,34 +165,74 @@ export default function MinimalistView({ projects = [], company }) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.08 }}
-              className="group cursor-pointer flex flex-col"
-              onClick={() => handleOpenLightbox(proj)}
+              className="group flex flex-col"
             >
-              <div className="relative h-96 sm:h-[420px] rounded-2xl overflow-hidden mb-5 bg-neutral-200">
-                <img
-                  src={proj.heroImage}
-                  alt={proj.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-xs uppercase tracking-wider text-black font-medium">
-                  {proj.category}
+              {/* Image Container with Direct Link & Quick Gallery Action */}
+              <div className="relative h-96 sm:h-[420px] rounded-2xl overflow-hidden mb-5 bg-neutral-200 border border-neutral-200">
+                <Link href={`/projects/${proj.slug}`} className="block w-full h-full">
+                  <img
+                    src={proj.heroImage}
+                    alt={proj.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </Link>
+
+                {/* Badges */}
+                <div className="absolute top-4 left-4 flex items-center gap-2">
+                  <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-xs uppercase tracking-wider text-black font-medium border border-neutral-200">
+                    {proj.category}
+                  </span>
                 </div>
-                <div className="absolute bottom-4 right-4 px-3.5 py-1.5 rounded-full bg-black text-white text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5 shadow-xl">
-                  <span>Explore Gallery</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+
+                <div className="absolute top-4 right-4">
+                  <button
+                    onClick={() => handleOpenLightbox(proj, 0)}
+                    className="px-3 py-1 rounded-full bg-black/80 hover:bg-black text-white text-xs uppercase tracking-wider flex items-center gap-1.5 transition-all shadow-lg"
+                    title="Quick Photo Gallery"
+                  >
+                    <Images className="w-3.5 h-3.5" />
+                    <span>{proj.images?.length || 1} Photos</span>
+                  </button>
                 </div>
               </div>
 
+              {/* Title & Metadata */}
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <h3 className="text-2xl font-serif text-black group-hover:underline underline-offset-4">
-                    {proj.title}
-                  </h3>
+                  <Link href={`/projects/${proj.slug}`}>
+                    <h3 className="text-2xl sm:text-3xl font-serif text-black group-hover:underline underline-offset-4">
+                      {proj.title}
+                    </h3>
+                  </Link>
                   <p className="text-xs text-neutral-500 uppercase tracking-widest mt-1">
                     {proj.subtitle} • {proj.location}
                   </p>
+                  <p className="text-sm text-neutral-600 font-light mt-3 line-clamp-2 leading-relaxed">
+                    {proj.description}
+                  </p>
+
+                  {/* Prominent Action Links */}
+                  <div className="mt-4 flex items-center gap-4">
+                    <Link
+                      href={`/projects/${proj.slug}`}
+                      className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-black hover:bg-neutral-800 text-white text-xs uppercase tracking-wider font-medium transition-colors"
+                    >
+                      <span>View Project Details</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </Link>
+
+                    <button
+                      onClick={() => handleOpenLightbox(proj, 0)}
+                      className="text-xs uppercase tracking-wider text-neutral-600 hover:text-black font-medium flex items-center gap-1 transition-colors"
+                    >
+                      <span>Photos ({proj.images?.length || 1})</span>
+                    </button>
+                  </div>
                 </div>
-                <span className="text-sm font-serif text-neutral-400 font-light">{proj.year}</span>
+
+                <span className="text-sm font-serif text-neutral-400 font-light flex-shrink-0">
+                  {proj.year}
+                </span>
               </div>
             </motion.div>
           ))}
@@ -220,7 +269,7 @@ export default function MinimalistView({ projects = [], company }) {
       />
 
       {/* Minimal Footer */}
-      <footer className="border-t border-[#E8E6DF] py-12 px-6 md:px-12 text-xs text-neutral-500 flex flex-col sm:flex-row items-center justify-between gap-4 max-w-7xl mx-auto">
+      <footer id="contact" className="border-t border-[#E8E6DF] py-12 px-6 md:px-12 text-xs text-neutral-500 flex flex-col sm:flex-row items-center justify-between gap-4 max-w-7xl mx-auto">
         <div>© {new Date().getFullYear()} Mezz Group. 252 High Street, Ashburton VIC 3147.</div>
         <div className="flex items-center gap-6">
           <a href="tel:0433124797" className="hover:text-black">0433 124 797</a>

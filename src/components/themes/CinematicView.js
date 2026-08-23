@@ -28,6 +28,8 @@ export default function CinematicView({ projects = [], company }) {
     setLightboxOpen(true);
   };
 
+  const currentHeroProject = heroSlides[slideIndex] || projects[0];
+
   return (
     <div className="bg-[#080B0E] text-white min-h-screen font-sans selection:bg-emerald-400 selection:text-black">
       {/* Header */}
@@ -70,8 +72,8 @@ export default function CinematicView({ projects = [], company }) {
             className="absolute inset-0 z-0"
           >
             <img
-              src={heroSlides[slideIndex]?.heroImage}
-              alt={heroSlides[slideIndex]?.title}
+              src={currentHeroProject?.heroImage}
+              alt={currentHeroProject?.title}
               className="w-full h-full object-cover filter brightness-[0.4]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#080B0E] via-black/30 to-black/60" />
@@ -82,24 +84,33 @@ export default function CinematicView({ projects = [], company }) {
         <div className="relative z-10 max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 text-xs uppercase tracking-widest mb-4">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>{heroSlides[slideIndex]?.category} Showcase 0{slideIndex + 1}</span>
+            <span>{currentHeroProject?.category} Showcase 0{slideIndex + 1}</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif text-white font-normal mb-4 leading-tight">
-            {heroSlides[slideIndex]?.title}
+            {currentHeroProject?.title}
           </h1>
 
           <p className="text-base sm:text-xl text-neutral-300 font-light max-w-2xl leading-relaxed mb-8">
-            {heroSlides[slideIndex]?.subtitle} — {heroSlides[slideIndex]?.location}
+            {currentHeroProject?.subtitle} — {currentHeroProject?.location}
           </p>
 
-          <div className="flex items-center gap-4">
-            <button
-              onClick={() => handleOpenLightbox(heroSlides[slideIndex])}
-              className="px-8 py-3.5 rounded-full bg-emerald-400 text-black font-semibold text-xs uppercase tracking-[0.15em] flex items-center gap-2 hover:bg-emerald-300 transition-colors"
+          {/* Dual Prominent Actions */}
+          <div className="flex flex-wrap items-center gap-4">
+            <Link
+              href={`/projects/${currentHeroProject?.slug}`}
+              className="px-8 py-3.5 rounded-full bg-emerald-400 text-black font-semibold text-xs uppercase tracking-[0.15em] flex items-center gap-2 hover:bg-emerald-300 transition-colors shadow-lg shadow-emerald-400/20"
             >
-              <span>Explore Gallery</span>
+              <span>View Project Details</span>
               <ArrowUpRight className="w-4 h-4" />
+            </Link>
+
+            <button
+              onClick={() => handleOpenLightbox(currentHeroProject, 0)}
+              className="px-6 py-3.5 rounded-full bg-black/60 border border-white/20 hover:border-white text-white text-xs uppercase tracking-[0.15em] flex items-center gap-2 backdrop-blur-md transition-colors"
+            >
+              <Images className="w-4 h-4 text-emerald-400" />
+              <span>Quick Gallery ({currentHeroProject?.images?.length || 1})</span>
             </button>
           </div>
         </div>
@@ -139,35 +150,59 @@ export default function CinematicView({ projects = [], company }) {
           {projects.map((proj) => (
             <div
               key={proj.id}
-              onClick={() => handleOpenLightbox(proj)}
-              className="group cursor-pointer rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-emerald-400/50 transition-all p-4 flex flex-col justify-between"
+              className="group rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-emerald-400/50 transition-all p-5 flex flex-col justify-between"
             >
-              <div className="relative h-64 rounded-xl overflow-hidden mb-4">
-                <img
-                  src={proj.heroImage}
-                  alt={proj.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] uppercase tracking-wider text-emerald-400">
-                  {proj.category}
-                </div>
-              </div>
-
               <div>
+                <div className="relative h-64 rounded-xl overflow-hidden mb-4">
+                  <Link href={`/projects/${proj.slug}`} className="block w-full h-full">
+                    <img
+                      src={proj.heroImage}
+                      alt={proj.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </Link>
+                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] uppercase tracking-wider text-emerald-400">
+                    {proj.category}
+                  </div>
+                  <button
+                    onClick={() => handleOpenLightbox(proj, 0)}
+                    className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/70 hover:bg-black backdrop-blur-md text-white text-[10px] flex items-center gap-1 transition-colors"
+                    title="Quick Gallery"
+                  >
+                    <Images className="w-3 h-3 text-emerald-400" />
+                    <span>{proj.images?.length || 1}</span>
+                  </button>
+                </div>
+
                 <div className="text-xs text-neutral-400 uppercase tracking-wider">{proj.subtitle}</div>
-                <h3 className="text-xl font-serif text-white mt-0.5 group-hover:text-emerald-400 transition-colors">
-                  {proj.title}
-                </h3>
-                <p className="text-xs text-neutral-400 font-light mt-2 line-clamp-2">
+                <Link href={`/projects/${proj.slug}`}>
+                  <h3 className="text-2xl font-serif text-white mt-0.5 group-hover:text-emerald-400 transition-colors">
+                    {proj.title}
+                  </h3>
+                </Link>
+                <p className="text-xs text-neutral-400 font-light mt-2 line-clamp-2 leading-relaxed">
                   {proj.description}
                 </p>
               </div>
 
-              <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between text-xs text-neutral-500">
-                <span>{proj.location}</span>
-                <span className="text-emerald-400 flex items-center gap-1">
-                  View Photos ({proj.images?.length || 1}) →
-                </span>
+              {/* Action Buttons */}
+              <div className="pt-5 mt-5 border-t border-white/10 flex items-center gap-3">
+                <Link
+                  href={`/projects/${proj.slug}`}
+                  className="flex-1 py-2.5 px-3 rounded-xl bg-emerald-400 hover:bg-emerald-300 text-black font-semibold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1 transition-all"
+                >
+                  <span>View Details</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </Link>
+
+                <button
+                  onClick={() => handleOpenLightbox(proj, 0)}
+                  className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-neutral-300 hover:text-white flex items-center gap-1.5 transition-colors"
+                  title="Open Gallery"
+                >
+                  <Images className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>Gallery</span>
+                </button>
               </div>
             </div>
           ))}
@@ -183,7 +218,7 @@ export default function CinematicView({ projects = [], company }) {
       />
 
       {/* Footer */}
-      <footer className="border-t border-white/10 py-12 px-6 md:px-16 text-xs text-neutral-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <footer id="contact" className="border-t border-white/10 py-12 px-6 md:px-16 text-xs text-neutral-500 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>Mezz Group — 252 High Street, Ashburton VIC 3147</div>
         <div>Melbourne Architectural Studio</div>
       </footer>
