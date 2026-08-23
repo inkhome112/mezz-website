@@ -1,0 +1,112 @@
+'use client';
+
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Layers, Sparkles, Plus, LayoutDashboard } from 'lucide-react';
+import ProjectCard from './ProjectCard';
+import LightboxModal from './LightboxModal';
+import Link from 'next/link';
+
+export default function ProjectGrid({ projects = [] }) {
+  const [activeCategory, setActiveCategory] = useState('All');
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+
+  const categories = ['All', 'Residential', 'Hospitality', 'Childcare'];
+
+  const filteredProjects =
+    activeCategory === 'All'
+      ? projects
+      : projects.filter(
+          (p) => p.category.toLowerCase() === activeCategory.toLowerCase()
+        );
+
+  const handleOpenLightbox = (project) => {
+    setSelectedProject(project);
+    setLightboxOpen(true);
+  };
+
+  return (
+    <section id="projects" className="py-28 md:py-36 px-6 md:px-12 max-w-7xl mx-auto">
+      {/* Section Header */}
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+        <div>
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-[#C5A880] mb-3">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Curated Portfolio</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-white">
+            Featured Developments
+          </h2>
+        </div>
+
+        {/* Category Filter Pills (60fps layout animation) */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`relative px-5 py-2.5 rounded-full text-xs uppercase tracking-[0.15em] font-medium transition-all duration-300 ${
+                activeCategory === cat
+                  ? 'text-black'
+                  : 'text-neutral-400 hover:text-white border border-neutral-800 bg-neutral-900/50'
+              }`}
+            >
+              {activeCategory === cat && (
+                <motion.div
+                  layoutId="activeCategoryBg"
+                  className="absolute inset-0 rounded-full bg-[#C5A880] -z-10 shadow-lg shadow-[#C5A880]/20"
+                  transition={{ type: 'spring', stiffness: 350, damping: 30 }}
+                />
+              )}
+              <span>{cat}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Grid of Projects */}
+      <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <AnimatePresence mode="popLayout">
+          {filteredProjects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onOpenLightbox={handleOpenLightbox}
+            />
+          ))}
+        </AnimatePresence>
+      </motion.div>
+
+      {/* Add / Edit via CMS Studio Banner */}
+      <div className="mt-16 p-8 rounded-2xl glass-panel border border-neutral-800 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 rounded-xl bg-[#C5A880]/10 border border-[#C5A880]/30 flex items-center justify-center text-[#C5A880]">
+            <LayoutDashboard className="w-6 h-6" />
+          </div>
+          <div>
+            <h4 className="text-lg font-serif text-white">Visual Content & Image Studio</h4>
+            <p className="text-xs text-neutral-400 mt-0.5">
+              Easily update project photos, titles, and descriptions directly from your browser.
+            </p>
+          </div>
+        </div>
+
+        <Link
+          href="/admin"
+          className="px-6 py-3 rounded-full bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 text-white text-xs uppercase tracking-[0.15em] flex items-center gap-2 transition-all hover:scale-105"
+        >
+          <Plus className="w-4 h-4 text-[#C5A880]" />
+          <span>Manage / Add Projects</span>
+        </Link>
+      </div>
+
+      {/* Full-Screen Lightbox Modal */}
+      <LightboxModal
+        project={selectedProject}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+      />
+    </section>
+  );
+}

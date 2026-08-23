@@ -1,0 +1,48 @@
+{
+  "name": "Mezz Group",
+  "tagline": "Innovative Architectural & Property Development Firm",
+  "headline": "Elevating Spaces. Defining Modern Architecture.",
+  "subheadline": "Melbourne-based architectural and development studio delivering thoughtful residential, commercial, and hospitality spaces that stand the test of time.",
+  "about": {
+    "title": "Innovative & Melbourne Based Firm",
+    "paragraphs": [
+      "Mezz Group specializes in residential developments, including boutique multi-level townhouses and medium-rise residences, as well as high-traffic commercial and hospitality venues.",
+      "We meticulously consider our clients' vision, site context, and functional requirements to craft spaces that inspire. Our process blends architectural rigor, contemporary form, and refined material craftsmanship."
+    ],
+    "principles": [
+      {
+        "title": "Thoughtful Design Alignment",
+        "description": "Architectural solutions tailored to each client's vision and context."
+      },
+      {
+        "title": "Aesthetic & Functional Balance",
+        "description": "Bold, sculptural forms paired with effortless daily usability."
+      },
+      {
+        "title": "Spatial Optimization",
+        "description": "Maximizing natural light and spatial efficiency without compromise."
+      },
+      {
+        "title": "End-to-End Collaboration",
+        "description": "Active consultation from initial concept through delivery and handover."
+      }
+    ]
+  },
+  "stats": [
+    { "label": "Developments Completed", "value": "45+", "suffix": "" },
+    { "label": "Portfolio Project Value", "value": "$120M+", "suffix": "" },
+    { "label": "Years of Excellence", "value": "15+", "suffix": "" },
+    { "label": "Client Satisfaction", "value": "100%", "suffix": "" }
+  ],
+  "contact": {
+    "address": "252 High Street, Ashburton",
+    "state": "VIC 3147",
+    "country": "Australia",
+    "phone": "0433 124 797",
+    "phoneRaw": "+61433124797",
+    "email": "info@mezzgroup.com.au",
+    "hours": "Mon - Fri: 9:00 AM - 5:30 PM",
+    "instagram": "https://instagram.com/mezzgroup",
+    "linkedin": "https://linkedin.com/company/mezzgroup"
+  }
+}
