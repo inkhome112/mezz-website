@@ -4,26 +4,25 @@
     "slug": "tennyson",
     "title": "Tennyson",
     "category": "Residential",
-    "subtitle": "Contemporary Residence",
+    "subtitle": "Contemporary Architectural Residence",
     "location": "Malvern East VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful residential architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Malvern East VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585154340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Malvern East VIC.",
     "stats": {
-      "type": "Residential Development",
-      "status": "Completed / Handed Over",
+      "residences": "Residential Architecture",
+      "completion": "Completed / Handover",
       "location": "Malvern East VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585154340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -34,23 +33,22 @@
     "subtitle": "Bespoke Multi-Residential",
     "location": "Kooyong VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful residential architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Kooyong VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585155340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Kooyong VIC.",
     "stats": {
-      "type": "Residential Development",
-      "status": "Completed / Handed Over",
+      "residences": "Residential Architecture",
+      "completion": "Completed / Handover",
       "location": "Kooyong VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585155340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -61,23 +59,22 @@
     "subtitle": "Modern Townhouse Living",
     "location": "Mitcham VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful residential architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Mitcham VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585156340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Mitcham VIC.",
     "stats": {
-      "type": "Residential Development",
-      "status": "Completed / Handed Over",
+      "residences": "Residential Architecture",
+      "completion": "Completed / Handover",
       "location": "Mitcham VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585156340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -88,23 +85,22 @@
     "subtitle": "Luxury Architectural Residence",
     "location": "Mount Waverley VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful residential architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Mount Waverley VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585157340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Mount Waverley VIC.",
     "stats": {
-      "type": "Residential Development",
-      "status": "Completed / Handed Over",
+      "residences": "Residential Architecture",
+      "completion": "Completed / Handover",
       "location": "Mount Waverley VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585157340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -115,23 +111,22 @@
     "subtitle": "8 Luxury Townhouses",
     "location": "Glen Iris VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful residential architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Glen Iris VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585158340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Glen Iris VIC.",
     "stats": {
-      "type": "Residential Development",
-      "status": "Completed / Handed Over",
+      "residences": "Residential Architecture",
+      "completion": "Completed / Handover",
       "location": "Glen Iris VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585158340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -139,26 +134,25 @@
     "slug": "romoly",
     "title": "Romoly",
     "category": "Residential",
-    "subtitle": "Residential Architecture",
+    "subtitle": "Contemporary Residential Townhomes",
     "location": "Melbourne VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful residential architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585159340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Melbourne VIC.",
     "stats": {
-      "type": "Residential Development",
-      "status": "Completed / Handed Over",
+      "residences": "Residential Architecture",
+      "completion": "Completed / Handover",
       "location": "Melbourne VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585159340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -166,26 +160,25 @@
     "slug": "brindy",
     "title": "Brindy",
     "category": "Residential",
-    "subtitle": "Residential Architecture",
+    "subtitle": "Bespoke Architectural Living",
     "location": "Melbourne VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful residential architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585160340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Melbourne VIC.",
     "stats": {
-      "type": "Residential Development",
-      "status": "Completed / Handed Over",
+      "residences": "Residential Architecture",
+      "completion": "Completed / Handover",
       "location": "Melbourne VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585160340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -193,26 +186,25 @@
     "slug": "westham",
     "title": "Westham",
     "category": "Residential",
-    "subtitle": "Residential Architecture",
+    "subtitle": "Architectural Townhouse Collection",
     "location": "Melbourne VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful residential architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585161340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Melbourne VIC.",
     "stats": {
-      "type": "Residential Development",
-      "status": "Completed / Handed Over",
+      "residences": "Residential Architecture",
+      "completion": "Completed / Handover",
       "location": "Melbourne VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585161340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -220,26 +212,25 @@
     "slug": "galahad",
     "title": "Galahad",
     "category": "Residential",
-    "subtitle": "Residential Architecture",
+    "subtitle": "Modern Urban Residences",
     "location": "Melbourne VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful residential architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585162340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Melbourne VIC.",
     "stats": {
-      "type": "Residential Development",
-      "status": "Completed / Handed Over",
+      "residences": "Residential Architecture",
+      "completion": "Completed / Handover",
       "location": "Melbourne VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585162340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -247,26 +238,25 @@
     "slug": "minaki",
     "title": "Minaki",
     "category": "Residential",
-    "subtitle": "Residential Architecture",
+    "subtitle": "Luxury Architectural Living",
     "location": "Melbourne VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful residential architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585163340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Melbourne VIC.",
     "stats": {
-      "type": "Residential Development",
-      "status": "Completed / Handed Over",
+      "residences": "Residential Architecture",
+      "completion": "Completed / Handover",
       "location": "Melbourne VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585163340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -274,26 +264,25 @@
     "slug": "maggs",
     "title": "Maggs",
     "category": "Residential",
-    "subtitle": "Residential Architecture",
+    "subtitle": "Bespoke Spatial Design",
     "location": "Melbourne VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful residential architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585164340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Melbourne VIC.",
     "stats": {
-      "type": "Residential Development",
-      "status": "Completed / Handed Over",
+      "residences": "Residential Architecture",
+      "completion": "Completed / Handover",
       "location": "Melbourne VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585164340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -304,50 +293,48 @@
     "subtitle": "Contemporary Urban Residences",
     "location": "Hawthorn VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful residential architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Hawthorn VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585165340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Hawthorn VIC.",
     "stats": {
-      "type": "Residential Development",
-      "status": "Completed / Handed Over",
+      "residences": "Residential Architecture",
+      "completion": "Completed / Handover",
       "location": "Hawthorn VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585165340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
     "id": "alexandracanterbury",
     "slug": "alexandracanterbury",
-    "title": "Alexandracanterbury",
+    "title": "Alexandra",
     "category": "Residential",
     "subtitle": "Heritage & Modern Integration",
     "location": "Canterbury VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful residential architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Canterbury VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585166340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Canterbury VIC.",
     "stats": {
-      "type": "Residential Development",
-      "status": "Completed / Handed Over",
+      "residences": "Residential Architecture",
+      "completion": "Completed / Handover",
       "location": "Canterbury VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585166340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -358,23 +345,22 @@
     "subtitle": "Edwardian Heritage Extension",
     "location": "Malvern East VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful residential architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Malvern East VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585167340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Malvern East VIC.",
     "stats": {
-      "type": "Residential Development",
-      "status": "Completed / Handed Over",
+      "residences": "Residential Architecture",
+      "completion": "Completed / Handover",
       "location": "Malvern East VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585167340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -382,26 +368,25 @@
     "slug": "benton",
     "title": "Benton",
     "category": "Residential",
-    "subtitle": "Residential Architecture",
+    "subtitle": "Architectural Residence",
     "location": "Melbourne VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful residential architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585168340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Melbourne VIC.",
     "stats": {
-      "type": "Residential Development",
-      "status": "Completed / Handed Over",
+      "residences": "Residential Architecture",
+      "completion": "Completed / Handover",
       "location": "Melbourne VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585168340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -409,26 +394,25 @@
     "slug": "templestowe",
     "title": "Templestowe",
     "category": "Residential",
-    "subtitle": "Residential Architecture",
-    "location": "Melbourne VIC",
+    "subtitle": "Bespoke Multi-Residential",
+    "location": "Templestowe VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful residential architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585169340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Templestowe VIC.",
     "stats": {
-      "type": "Residential Development",
-      "status": "Completed / Handed Over",
-      "location": "Melbourne VIC"
+      "residences": "Residential Architecture",
+      "completion": "Completed / Handover",
+      "location": "Templestowe VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585169340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -436,26 +420,25 @@
     "slug": "ashburton-early-learning",
     "title": "Ashburton Early Learning",
     "category": "Commercial",
-    "subtitle": "Early Learning & Childcare Centre",
-    "location": "Melbourne VIC",
+    "subtitle": "Purpose-Built Childcare Centre",
+    "location": "Ashburton VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful commercial architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585170340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Ashburton VIC.",
     "stats": {
-      "type": "Commercial Development",
-      "status": "Completed / Handed Over",
-      "location": "Melbourne VIC"
+      "residences": "Commercial Architecture",
+      "completion": "Completed / Handover",
+      "location": "Ashburton VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585170340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -463,26 +446,25 @@
     "slug": "glenroy-childcare",
     "title": "Glenroy Childcare",
     "category": "Commercial",
-    "subtitle": "Early Learning & Childcare Centre",
-    "location": "Melbourne VIC",
+    "subtitle": "State-of-the-Art Early Learning Facility",
+    "location": "Glenroy VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful commercial architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585171340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Glenroy VIC.",
     "stats": {
-      "type": "Commercial Development",
-      "status": "Completed / Handed Over",
-      "location": "Melbourne VIC"
+      "residences": "Commercial Architecture",
+      "completion": "Completed / Handover",
+      "location": "Glenroy VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585171340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -490,80 +472,77 @@
     "slug": "james",
     "title": "James",
     "category": "Commercial",
-    "subtitle": "Commercial Architecture",
+    "subtitle": "Commercial Architectural Complex",
     "location": "Melbourne VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful commercial architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585172340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Melbourne VIC.",
     "stats": {
-      "type": "Commercial Development",
-      "status": "Completed / Handed Over",
+      "residences": "Commercial Architecture",
+      "completion": "Completed / Handover",
       "location": "Melbourne VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585172340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
     "id": "thompsons-apartments-and-townhouses",
     "slug": "thompsons-apartments-and-townhouses",
-    "title": "Thompsons Apartments And Townhouses",
-    "category": "Hospitality",
-    "subtitle": "Hospitality Architecture",
-    "location": "Melbourne VIC",
+    "title": "Thompsons Apartments & Townhouses",
+    "category": "Commercial",
+    "subtitle": "Mixed-Use Residential & Commercial",
+    "location": "Templestowe Lower VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful hospitality architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585173340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Templestowe Lower VIC.",
     "stats": {
-      "type": "Hospitality Development",
-      "status": "Completed / Handed Over",
-      "location": "Melbourne VIC"
+      "residences": "Commercial Architecture",
+      "completion": "Completed / Handover",
+      "location": "Templestowe Lower VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585173340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
     "id": "eunoia-childcare-centre",
     "slug": "eunoia-childcare-centre",
-    "title": "Eunoia Childcare Centre",
+    "title": "Eunoia Education Childcare",
     "category": "Commercial",
-    "subtitle": "Early Learning & Childcare Centre",
+    "subtitle": "Early Learning Centre Development",
     "location": "Melbourne VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful commercial architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585174340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Melbourne VIC.",
     "stats": {
-      "type": "Commercial Development",
-      "status": "Completed / Handed Over",
+      "residences": "Commercial Architecture",
+      "completion": "Completed / Handover",
       "location": "Melbourne VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585174340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -571,26 +550,25 @@
     "slug": "thompsons-childcare",
     "title": "Thompsons Childcare",
     "category": "Commercial",
-    "subtitle": "Early Learning & Childcare Centre",
-    "location": "Melbourne VIC",
+    "subtitle": "Modern Childcare Facility",
+    "location": "Templestowe Lower VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful commercial architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585175340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Templestowe Lower VIC.",
     "stats": {
-      "type": "Commercial Development",
-      "status": "Completed / Handed Over",
-      "location": "Melbourne VIC"
+      "residences": "Commercial Architecture",
+      "completion": "Completed / Handover",
+      "location": "Templestowe Lower VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585175340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -598,26 +576,51 @@
     "slug": "tao-dumplings",
     "title": "Tao Dumplings",
     "category": "Hospitality",
-    "subtitle": "Flagship Restaurant & Bar",
+    "subtitle": "Flagship Asian Restaurant & Bar",
     "location": "Mentone VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful hospitality architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Mentone VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585176340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Mentone VIC.",
     "stats": {
-      "type": "Hospitality Development",
-      "status": "Completed / Handed Over",
+      "residences": "Hospitality Architecture",
+      "completion": "Completed / Handover",
       "location": "Mentone VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585176340?auto=format&fit=crop&w=1600&q=80"
+    ]
+  },
+  {
+    "id": "mamamee",
+    "slug": "mamamee",
+    "title": "Ma Ma Mee",
+    "category": "Hospitality",
+    "subtitle": "Modern Asian Fusion Venue",
+    "location": "Werribee VIC",
+    "client": "Private Client",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585177340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Werribee VIC.",
+    "stats": {
+      "residences": "Hospitality Architecture",
+      "completion": "Completed / Handover",
+      "location": "Werribee VIC"
+    },
+    "features": [
+      "Tailored architectural spatial planning",
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1600585177340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -625,26 +628,25 @@
     "slug": "australian-music-world",
     "title": "Australian Music World",
     "category": "Hospitality",
-    "subtitle": "Hospitality Architecture",
+    "subtitle": "Commercial Retail Showroom",
     "location": "Melbourne VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful hospitality architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585178340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Melbourne VIC.",
     "stats": {
-      "type": "Hospitality Development",
-      "status": "Completed / Handed Over",
+      "residences": "Hospitality Architecture",
+      "completion": "Completed / Handover",
       "location": "Melbourne VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585178340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -652,53 +654,25 @@
     "slug": "dukes-gym",
     "title": "Dukes Gym",
     "category": "Hospitality",
-    "subtitle": "Hospitality Architecture",
+    "subtitle": "Premium Fitness Facility",
     "location": "Melbourne VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful hospitality architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585179340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Melbourne VIC.",
     "stats": {
-      "type": "Hospitality Development",
-      "status": "Completed / Handed Over",
+      "residences": "Hospitality Architecture",
+      "completion": "Completed / Handover",
       "location": "Melbourne VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
-    ]
-  },
-  {
-    "id": "mamamee",
-    "slug": "mamamee",
-    "title": "Mamamee",
-    "category": "Hospitality",
-    "subtitle": "Modern Asian Fusion Venue",
-    "location": "Werribee VIC",
-    "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful hospitality architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Werribee VIC.",
-    "stats": {
-      "type": "Hospitality Development",
-      "status": "Completed / Handed Over",
-      "location": "Werribee VIC"
-    },
-    "features": [
-      "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
-    ],
-    "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585179340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -706,26 +680,25 @@
     "slug": "digital-art-studio",
     "title": "Digital Art Studio",
     "category": "Hospitality",
-    "subtitle": "Hospitality Architecture",
+    "subtitle": "Creative Commercial Studio",
     "location": "Melbourne VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful hospitality architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585180340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Melbourne VIC.",
     "stats": {
-      "type": "Hospitality Development",
-      "status": "Completed / Handed Over",
+      "residences": "Hospitality Architecture",
+      "completion": "Completed / Handover",
       "location": "Melbourne VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585180340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -733,26 +706,25 @@
     "slug": "prime-cosmetic",
     "title": "Prime Cosmetic",
     "category": "Hospitality",
-    "subtitle": "Hospitality Architecture",
+    "subtitle": "Luxury Clinic Interior",
     "location": "Melbourne VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful hospitality architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585181340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Melbourne VIC.",
     "stats": {
-      "type": "Hospitality Development",
-      "status": "Completed / Handed Over",
+      "residences": "Hospitality Architecture",
+      "completion": "Completed / Handover",
       "location": "Melbourne VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585181340?auto=format&fit=crop&w=1600&q=80"
     ]
   },
   {
@@ -760,26 +732,25 @@
     "slug": "yakinau-izakaya",
     "title": "Yakinau Izakaya",
     "category": "Hospitality",
-    "subtitle": "Hospitality Architecture",
+    "subtitle": "Japanese Dining & Bar",
     "location": "Melbourne VIC",
     "client": "Private Client",
-    "year": "2022 - 2025",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "description": "A thoughtful hospitality architectural development by Mezz Group, balancing contemporary form, natural light, and refined material craftsmanship in Melbourne VIC.",
+    "year": "2021 - 2025",
+    "heroImage": "https://images.unsplash.com/photo-1600585182340?auto=format&fit=crop&w=1600&q=80",
+    "description": "A bespoke architectural project by Mezz Group in Melbourne VIC.",
     "stats": {
-      "type": "Hospitality Development",
-      "status": "Completed / Handed Over",
+      "residences": "Hospitality Architecture",
+      "completion": "Completed / Handover",
       "location": "Melbourne VIC"
     },
     "features": [
       "Tailored architectural spatial planning",
-      "Abundant ambient natural light and ventilation",
-      "Refined material palette and custom detailing",
-      "Seamless indoor-outdoor living connectivity"
+      "Abundant natural lighting and ambient ventilation",
+      "Custom fixtures and refined material craftsmanship",
+      "Seamless indoor-outdoor connectivity"
     ],
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1600585182340?auto=format&fit=crop&w=1600&q=80"
     ]
   }
 ]
