@@ -46,16 +46,9 @@ export default function MinimalistView({ projects = [], company }) {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Link
-              href="/admin"
-              className="px-4 py-2 rounded-full border border-neutral-300 hover:border-black text-neutral-700 hover:text-black text-xs uppercase tracking-wider flex items-center gap-2 transition-all"
-            >
-              <LayoutDashboard className="w-3.5 h-3.5" />
-              <span>CMS Studio</span>
-            </Link>
             <a
               href="#contact"
-              className="px-5 py-2 rounded-full bg-black text-white text-xs uppercase tracking-wider hover:bg-neutral-800 transition-colors"
+              className="px-6 py-2.5 rounded-full bg-black text-white text-xs uppercase tracking-wider hover:bg-neutral-800 transition-colors"
             >
               Enquire
             </a>

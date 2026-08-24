@@ -80,28 +80,7 @@ export default function ProjectGrid({ projects = [] }) {
         </AnimatePresence>
       </motion.div>
 
-      {/* Add / Edit via CMS Studio Banner */}
-      <div className="mt-16 p-8 rounded-2xl glass-panel border border-neutral-800 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-[#C5A880]/10 border border-[#C5A880]/30 flex items-center justify-center text-[#C5A880]">
-            <LayoutDashboard className="w-6 h-6" />
-          </div>
-          <div>
-            <h4 className="text-lg font-serif text-white">Visual Content & Image Studio</h4>
-            <p className="text-xs text-neutral-400 mt-0.5">
-              Easily update project photos, titles, and descriptions directly from your browser.
-            </p>
-          </div>
-        </div>
 
-        <Link
-          href="/admin"
-          className="px-6 py-3 rounded-full bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 text-white text-xs uppercase tracking-[0.15em] flex items-center gap-2 transition-all hover:scale-105"
-        >
-          <Plus className="w-4 h-4 text-[#C5A880]" />
-          <span>Manage / Add Projects</span>
-        </Link>
-      </div>
 
       {/* Full-Screen Lightbox Modal */}
       <LightboxModal

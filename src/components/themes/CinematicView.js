@@ -44,16 +44,9 @@ export default function CinematicView({ projects = [], company }) {
         </Link>
 
         <div className="flex items-center gap-4">
-          <Link
-            href="/admin"
-            className="px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 text-xs uppercase tracking-wider flex items-center gap-2"
-          >
-            <LayoutDashboard className="w-3.5 h-3.5 text-emerald-400" />
-            <span>CMS Studio</span>
-          </Link>
           <a
             href="#contact"
-            className="px-5 py-2 rounded-full bg-emerald-400 text-black font-semibold text-xs uppercase tracking-wider hover:bg-emerald-300 transition-colors"
+            className="px-6 py-2.5 rounded-full bg-emerald-400 text-black font-semibold text-xs uppercase tracking-wider hover:bg-emerald-300 transition-colors"
           >
             Inquire
           </a>

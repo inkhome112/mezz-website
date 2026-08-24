@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ProjectGrid from '@/components/ProjectGrid';
@@ -8,14 +8,25 @@ import StatsCounter from '@/components/StatsCounter';
 import AboutSection from '@/components/AboutSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
-import ThemeSwitcher from '@/components/ThemeSwitcher';
 
-// Alternative Views for Themes 2 and 3
+// Views for Themes 2 and 3
 import MinimalistView from '@/components/themes/MinimalistView';
 import CinematicView from '@/components/themes/CinematicView';
 
 export default function HomeClient({ projectsData, companyData }) {
-  const [theme, setTheme] = useState('noir'); // 'noir' | 'minimalist' | 'cinematic'
+  const [theme, setTheme] = useState(companyData?.activeTheme || 'noir');
+
+  useEffect(() => {
+    // Check if active theme is updated from API
+    fetch('/api/theme')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.activeTheme) {
+          setTheme(data.activeTheme);
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   return (
     <div className={theme === 'minimalist' ? 'theme-minimalist' : 'theme-dark'}>
@@ -38,9 +49,6 @@ export default function HomeClient({ projectsData, companyData }) {
       {theme === 'cinematic' && (
         <CinematicView projects={projectsData} company={companyData} />
       )}
-
-      {/* Floating Theme / Design Option Switcher */}
-      <ThemeSwitcher currentTheme={theme} onSelectTheme={setTheme} />
     </div>
   );
 }

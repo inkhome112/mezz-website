@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ArrowUpRight, Sparkles, LayoutDashboard } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
@@ -60,20 +60,11 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Right Action & CMS Studio Button */}
+          {/* Right Action Button */}
           <div className="hidden md:flex items-center gap-4">
-            <Link
-              href="/admin"
-              className="px-4 py-2 rounded-full border border-neutral-700/80 bg-neutral-900/60 hover:bg-neutral-800 text-neutral-300 hover:text-white text-xs tracking-wider uppercase transition-all duration-300 flex items-center gap-2 group"
-              title="Open Visual CMS Studio to edit content and upload photos"
-            >
-              <LayoutDashboard className="w-3.5 h-3.5 text-[#C5A880] group-hover:rotate-12 transition-transform" />
-              <span>CMS Studio</span>
-            </Link>
-
             <a
               href="#contact"
-              className="px-5 py-2.5 rounded-full bg-[#C5A880] hover:bg-[#DFC29A] text-black font-medium text-xs tracking-wider uppercase transition-all duration-300 flex items-center gap-1.5 shadow-lg shadow-[#C5A880]/10 hover:shadow-[#C5A880]/30 hover:scale-[1.02]"
+              className="px-6 py-2.5 rounded-full bg-[#C5A880] hover:bg-[#DFC29A] text-black font-medium text-xs tracking-wider uppercase transition-all duration-300 flex items-center gap-1.5 shadow-lg shadow-[#C5A880]/10 hover:shadow-[#C5A880]/30 hover:scale-[1.02]"
             >
               <span>Enquire</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -81,14 +72,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex md:hidden items-center gap-3">
-            <Link
-              href="/admin"
-              className="p-2 rounded-full bg-neutral-900 border border-neutral-800 text-[#C5A880]"
-              title="CMS Studio"
-            >
-              <LayoutDashboard className="w-4 h-4" />
-            </Link>
+          <div className="flex md:hidden items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-neutral-200 hover:text-white focus:outline-none"
@@ -125,14 +109,6 @@ export default function Navbar() {
                   <ArrowUpRight className="w-5 h-5 text-neutral-500" />
                 </a>
               ))}
-              <Link
-                href="/admin"
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-lg font-sans text-[#DFC29A] py-2 flex items-center gap-3"
-              >
-                <LayoutDashboard className="w-5 h-5" />
-                <span>Open CMS Visual Editor</span>
-              </Link>
             </div>
 
             <div className="flex flex-col gap-4 border-t border-neutral-800 pt-6">

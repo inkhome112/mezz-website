@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight, LayoutDashboard, Shield, Heart } from 'lucide-react';
+import { ArrowUpRight, MapPin, Phone, Mail } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-neutral-900 bg-[#070708] pt-20 pb-12 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-neutral-900">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-neutral-900">
           {/* Brand Col */}
           <div className="lg:col-span-2 flex flex-col">
             <Link href="/" className="group inline-block mb-4">
@@ -87,25 +87,6 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
-
-          {/* Studio Management & Contact */}
-          <div>
-            <h4 className="text-xs uppercase tracking-[0.2em] text-[#DFC29A] font-medium mb-4">
-              Content Studio
-            </h4>
-            <div className="space-y-4">
-              <Link
-                href="/admin"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 text-xs text-[#DFC29A] hover:text-white transition-all w-full justify-center"
-              >
-                <LayoutDashboard className="w-4 h-4 text-[#C5A880]" />
-                <span>Visual CMS Studio</span>
-              </Link>
-              <div className="text-[11px] text-neutral-500 leading-relaxed">
-                Add new projects, modify descriptions, and upload photos with instant live updates.
-              </div>
-            </div>
           </div>
         </div>
 
