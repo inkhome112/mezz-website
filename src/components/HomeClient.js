@@ -17,11 +17,27 @@ export default function HomeClient({ projectsData, companyData }) {
   const [theme, setTheme] = useState(companyData?.activeTheme || 'noir');
 
   useEffect(() => {
-    // Check if active theme is updated from API
+    // 1. Read immediate cookie or localStorage
+    const getCookie = (name) => {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+      return null;
+    };
+
+    const cookieTheme = getCookie('mezz_public_theme');
+    const localTheme = typeof window !== 'undefined' ? localStorage.getItem('mezz_public_theme') : null;
+    const active = cookieTheme || localTheme;
+
+    if (active && ['noir', 'minimalist', 'cinematic'].includes(active)) {
+      setTheme(active);
+    }
+
+    // 2. Fetch from API as secondary confirmation
     fetch('/api/theme')
       .then((res) => res.json())
       .then((data) => {
-        if (data?.activeTheme) {
+        if (data?.activeTheme && ['noir', 'minimalist', 'cinematic'].includes(data.activeTheme)) {
           setTheme(data.activeTheme);
         }
       })

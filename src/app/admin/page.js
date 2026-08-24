@@ -95,15 +95,19 @@ export default function AdminPage() {
 
   const handleThemeChange = async (themeId) => {
     setActiveTheme(themeId);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('mezz_public_theme', themeId);
+      document.cookie = `mezz_public_theme=${themeId}; path=/; max-age=31536000; SameSite=Lax`;
+    }
     try {
       await fetch('/api/theme', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ theme: themeId }),
       });
-      setSaveSuccess(true);
-      setTimeout(() => setSaveSuccess(false), 3000);
     } catch (err) {}
+    setSaveSuccess(true);
+    setTimeout(() => setSaveSuccess(false), 3000);
   };
 
   const handleEditClick = (project) => {

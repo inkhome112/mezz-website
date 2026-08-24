@@ -1,19 +1,16 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
-import companyData from '@/data/company.json';
+import { cookies } from 'next/headers';
 
-const companyFilePath = path.join(process.cwd(), 'src', 'data', 'company.json');
-
-export async function GET() {
+export async function GET(request) {
   try {
-    if (fs.existsSync(companyFilePath)) {
-      const data = JSON.parse(fs.readFileSync(companyFilePath, 'utf8'));
-      return NextResponse.json({ success: true, activeTheme: data.activeTheme || 'noir' });
-    }
-    return NextResponse.json({ success: true, activeTheme: companyData.activeTheme || 'noir' });
+    const cookieStore = await cookies();
+    const themeCookie = cookieStore.get('mezz_public_theme')?.value;
+    return NextResponse.json({
+      success: true,
+      activeTheme: themeCookie || 'noir',
+    });
   } catch (err) {
-    return NextResponse.json({ success: true, activeTheme: companyData.activeTheme || 'noir' });
+    return NextResponse.json({ success: true, activeTheme: 'noir' });
   }
 }
 
@@ -24,17 +21,19 @@ export async function POST(request) {
       return NextResponse.json({ success: false, message: 'Invalid theme' }, { status: 400 });
     }
 
-    try {
-      if (fs.existsSync(companyFilePath)) {
-        const data = JSON.parse(fs.readFileSync(companyFilePath, 'utf8'));
-        data.activeTheme = theme;
-        fs.writeFileSync(companyFilePath, JSON.stringify(data, null, 2), 'utf8');
-      }
-    } catch (writeErr) {
-      console.log('Serverless environment, active theme saved to memory/session');
-    }
+    const response = NextResponse.json({
+      success: true,
+      activeTheme: theme,
+    });
 
-    return NextResponse.json({ success: true, activeTheme: theme });
+    response.cookies.set('mezz_public_theme', theme, {
+      path: '/',
+      maxAge: 60 * 60 * 24 * 365, // 1 year
+      sameSite: 'lax',
+      httpOnly: false,
+    });
+
+    return response;
   } catch (error) {
     return NextResponse.json({ success: false, message: error.message }, { status: 500 });
   }
