@@ -73,7 +73,17 @@ export default function BeforeAfterSlider() {
 
   const handleTouchMove = (e) => {
     if (!isDragging) return;
-    handleMove(e.touches[0].clientX);
+    if (e.cancelable) e.preventDefault();
+    if (e.touches && e.touches.length > 0) {
+      handleMove(e.touches[0].clientX);
+    }
+  };
+
+  const handleTouchStart = (e) => {
+    setIsDragging(true);
+    if (e.touches && e.touches.length > 0) {
+      handleMove(e.touches[0].clientX);
+    }
   };
 
   const handleMouseMove = (e) => {
@@ -81,7 +91,11 @@ export default function BeforeAfterSlider() {
     handleMove(e.clientX);
   };
 
-  const handleMouseDown = () => setIsDragging(true);
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    handleMove(e.clientX);
+  };
+
   const handleMouseUp = () => setIsDragging(false);
 
   useEffect(() => {
@@ -95,12 +109,12 @@ export default function BeforeAfterSlider() {
   }, []);
 
   return (
-    <section id="transformations" className="py-28 px-6 md:px-12 bg-[#070709] border-t border-neutral-900 text-white relative overflow-hidden">
-      {/* Background Ambient Glow */}
-      <div className="absolute top-1/2 -left-48 w-96 h-96 rounded-full bg-[#C5A880]/5 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-48 w-96 h-96 rounded-full bg-[#C5A880]/5 blur-[120px] pointer-events-none" />
+    <section id="transformations" className="py-28 px-6 md:px-12 bg-[#070709] border-t border-neutral-900 text-white relative overflow-hidden overflow-x-clip max-w-full">
+      {/* Background Ambient Glow (Contained within boundaries) */}
+      <div className="absolute top-1/2 left-0 -translate-x-1/2 w-80 h-80 rounded-full bg-[#C5A880]/5 blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-0 translate-x-1/2 w-80 h-80 rounded-full bg-[#C5A880]/5 blur-[100px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10 w-full">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
@@ -115,7 +129,7 @@ export default function BeforeAfterSlider() {
           </div>
 
           {/* Project Switcher Tabs */}
-          <div className="flex flex-wrap items-center gap-2 p-1.5 rounded-full bg-neutral-900/80 border border-neutral-800 backdrop-blur-md">
+          <div className="flex flex-wrap items-center gap-2 p-1.5 rounded-full bg-neutral-900/80 border border-neutral-800 backdrop-blur-md max-w-full">
             {transformations.map((t, idx) => (
               <button
                 key={t.id}
@@ -136,16 +150,16 @@ export default function BeforeAfterSlider() {
         </div>
 
         {/* Interactive Comparison Split Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center max-w-full">
           {/* Slider Visual Column */}
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-8 w-full max-w-full">
             <div
               ref={containerRef}
               onMouseDown={handleMouseDown}
               onMouseMove={handleMouseMove}
-              onTouchStart={handleMouseDown}
+              onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
-              className="relative h-[420px] sm:h-[540px] rounded-3xl overflow-hidden shadow-2xl border border-neutral-800 cursor-ew-resize select-none bg-neutral-950"
+              className="relative h-[380px] sm:h-[540px] w-full rounded-3xl overflow-hidden shadow-2xl border border-neutral-800 cursor-ew-resize select-none bg-neutral-950 touch-none max-w-full"
             >
               {/* After Image (Full Base) */}
               <img

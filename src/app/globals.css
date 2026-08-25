@@ -18,12 +18,17 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-overflow-scrolling: touch;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
   }
 
   body {
     background-color: #0A0A0B;
     color: #F7F6F2;
-    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
     selection-background-color: #C5A880;
     selection-color: #0A0A0B;
     -webkit-tap-highlight-color: transparent;
