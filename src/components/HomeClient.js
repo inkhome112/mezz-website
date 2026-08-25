@@ -15,28 +15,18 @@ import MinimalistView from '@/components/themes/MinimalistView';
 import CinematicView from '@/components/themes/CinematicView';
 
 export default function HomeClient({ projectsData, companyData }) {
-  const [theme, setTheme] = useState(companyData?.activeTheme || 'noir');
+  // Theme is 100% determined by the server data
+  const theme = companyData?.activeTheme || 'noir';
 
   useEffect(() => {
-    if (companyData?.activeTheme && ['noir', 'minimalist', 'cinematic'].includes(companyData.activeTheme)) {
-      setTheme(companyData.activeTheme);
+    // Clear out any old legacy local storage/cookie caches from client phones
+    if (typeof window !== 'undefined') {
+      try {
+        localStorage.removeItem('mezz_public_theme');
+        document.cookie = 'mezz_public_theme=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+      } catch (e) {}
     }
-
-    const getCookie = (name) => {
-      const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) return parts.pop().split(';').shift();
-      return null;
-    };
-
-    const cookieTheme = getCookie('mezz_public_theme');
-    const localTheme = typeof window !== 'undefined' ? localStorage.getItem('mezz_public_theme') : null;
-    const active = cookieTheme || localTheme || companyData?.activeTheme;
-
-    if (active && ['noir', 'minimalist', 'cinematic'].includes(active)) {
-      setTheme(active);
-    }
-  }, [companyData?.activeTheme]);
+  }, []);
 
   return (
     <div className={theme === 'minimalist' ? 'theme-minimalist' : 'theme-dark'}>

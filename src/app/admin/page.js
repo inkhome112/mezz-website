@@ -95,10 +95,6 @@ export default function AdminPage() {
 
   const handleThemeChange = async (themeId) => {
     setActiveTheme(themeId);
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('mezz_public_theme', themeId);
-      document.cookie = `mezz_public_theme=${themeId}; path=/; max-age=31536000; SameSite=Lax`;
-    }
     try {
       await fetch('/api/theme', {
         method: 'POST',
