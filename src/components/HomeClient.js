@@ -15,17 +15,28 @@ import MinimalistView from '@/components/themes/MinimalistView';
 import CinematicView from '@/components/themes/CinematicView';
 
 export default function HomeClient({ projectsData, companyData }) {
-  // Theme is 100% determined by the server data
-  const theme = companyData?.activeTheme || 'noir';
+  const [theme, setTheme] = useState(companyData?.activeTheme || 'noir');
 
   useEffect(() => {
-    // Clear out any old legacy local storage/cookie caches from client phones
-    if (typeof window !== 'undefined') {
-      try {
-        localStorage.removeItem('mezz_public_theme');
-        document.cookie = 'mezz_public_theme=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
-      } catch (e) {}
-    }
+    // Keep theme state synchronized with server when user switches in admin
+    const checkTheme = () => {
+      fetch('/api/theme')
+        .then((res) => res.json())
+        .then((data) => {
+          if (data?.activeTheme && ['noir', 'minimalist', 'cinematic'].includes(data.activeTheme)) {
+            setTheme(data.activeTheme);
+          }
+        })
+        .catch(() => {});
+    };
+
+    checkTheme();
+    window.addEventListener('focus', checkTheme);
+    const interval = setInterval(checkTheme, 3000);
+    return () => {
+      window.removeEventListener('focus', checkTheme);
+      clearInterval(interval);
+    };
   }, []);
 
   return (

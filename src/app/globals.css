@@ -2,8 +2,6 @@
 
 @layer base {
   :root {
-    --background: 10 10 11;
-    --foreground: 247 246 242;
     --gold: #C5A880;
     --gold-light: #DFC29A;
     --gold-dark: #9E7D56;
@@ -11,9 +9,6 @@
 
   html {
     scroll-behavior: smooth;
-    color-scheme: dark;
-    background-color: #0A0A0B;
-    color: #F7F6F2;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -24,13 +19,9 @@
   }
 
   body {
-    background-color: #0A0A0B;
-    color: #F7F6F2;
     width: 100%;
     max-width: 100%;
     overflow-x: clip;
-    selection-background-color: #C5A880;
-    selection-color: #0A0A0B;
     -webkit-tap-highlight-color: transparent;
   }
 
@@ -56,6 +47,29 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #C5A880;
   }
+}
+
+/* Global Theme Classes */
+.theme-minimalist {
+  background-color: #FAF9F5 !important;
+  color: #121212 !important;
+  min-height: 100vh;
+}
+
+.theme-minimalist body {
+  background-color: #FAF9F5 !important;
+  color: #121212 !important;
+}
+
+.theme-dark {
+  background-color: #0A0A0B !important;
+  color: #F7F6F2 !important;
+  min-height: 100vh;
+}
+
+.theme-dark body {
+  background-color: #0A0A0B !important;
+  color: #F7F6F2 !important;
 }
 
 /* Glassmorphism utilities */
@@ -88,5 +102,5 @@
   transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .img-zoom:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
