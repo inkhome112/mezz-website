@@ -68,17 +68,15 @@ export default function ProjectGrid({ projects = [] }) {
       </div>
 
       {/* Grid of Projects */}
-      <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <AnimatePresence mode="popLayout">
-          {filteredProjects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              onOpenLightbox={handleOpenLightbox}
-            />
-          ))}
-        </AnimatePresence>
-      </motion.div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transform-gpu">
+        {filteredProjects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            project={project}
+            onOpenLightbox={handleOpenLightbox}
+          />
+        ))}
+      </div>
 
 
 

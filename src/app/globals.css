@@ -15,6 +15,9 @@
     background-color: #0A0A0B;
     color: #F7F6F2;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
   }
 
   body {
@@ -23,6 +26,15 @@
     overflow-x: hidden;
     selection-background-color: #C5A880;
     selection-color: #0A0A0B;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Hardware accelerated smooth rendering */
+  .transform-gpu {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
   /* Custom luxury scrollbar */

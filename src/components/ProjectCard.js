@@ -20,13 +20,8 @@ export default function ProjectCard({ project, onOpenLightbox }) {
   const imageCount = project.images ? project.images.length : 1;
 
   return (
-    <motion.div
-      layout
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-50px' }}
-      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-      className="group relative flex flex-col rounded-2xl overflow-hidden glass-panel border border-neutral-800/80 hover:border-[#C5A880]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#C5A880]/5"
+    <div
+      className="group relative flex flex-col rounded-2xl overflow-hidden glass-panel border border-neutral-800/80 hover:border-[#C5A880]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#C5A880]/5 transform-gpu will-change-transform opacity-100"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -123,6 +118,6 @@ export default function ProjectCard({ project, onOpenLightbox }) {
           </button>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

@@ -152,14 +152,10 @@ export default function MinimalistView({ projects = [], company }) {
 
         {/* Minimalist 2-Column Large Editorial Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {filtered.map((proj, idx) => (
-            <motion.div
+          {filtered.map((proj) => (
+            <div
               key={proj.id}
-              layout
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.08 }}
-              className="group flex flex-col"
+              className="group flex flex-col transform-gpu opacity-100"
             >
               {/* Image Container with Direct Link & Quick Gallery Action */}
               <div className="relative h-96 sm:h-[420px] rounded-2xl overflow-hidden mb-5 bg-neutral-200 border border-neutral-200">
@@ -228,7 +224,7 @@ export default function MinimalistView({ projects = [], company }) {
                   {proj.year}
                 </span>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>
