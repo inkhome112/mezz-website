@@ -32,17 +32,16 @@ export default function HomeClient({ projectsData, companyData }) {
 
     if (active && ['noir', 'minimalist', 'cinematic'].includes(active)) {
       setTheme(active);
+    } else {
+      fetch('/api/theme')
+        .then((res) => res.json())
+        .then((data) => {
+          if (data?.activeTheme && ['noir', 'minimalist', 'cinematic'].includes(data.activeTheme)) {
+            setTheme(data.activeTheme);
+          }
+        })
+        .catch(() => {});
     }
-
-    // 2. Fetch from API as secondary confirmation
-    fetch('/api/theme')
-      .then((res) => res.json())
-      .then((data) => {
-        if (data?.activeTheme && ['noir', 'minimalist', 'cinematic'].includes(data.activeTheme)) {
-          setTheme(data.activeTheme);
-        }
-      })
-      .catch(() => {});
   }, []);
 
   return (
