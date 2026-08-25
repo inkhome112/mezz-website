@@ -18,7 +18,10 @@ export default function HomeClient({ projectsData, companyData }) {
   const [theme, setTheme] = useState(companyData?.activeTheme || 'noir');
 
   useEffect(() => {
-    // 1. Read immediate cookie or localStorage
+    if (companyData?.activeTheme && ['noir', 'minimalist', 'cinematic'].includes(companyData.activeTheme)) {
+      setTheme(companyData.activeTheme);
+    }
+
     const getCookie = (name) => {
       const value = `; ${document.cookie}`;
       const parts = value.split(`; ${name}=`);
@@ -28,21 +31,12 @@ export default function HomeClient({ projectsData, companyData }) {
 
     const cookieTheme = getCookie('mezz_public_theme');
     const localTheme = typeof window !== 'undefined' ? localStorage.getItem('mezz_public_theme') : null;
-    const active = cookieTheme || localTheme;
+    const active = cookieTheme || localTheme || companyData?.activeTheme;
 
     if (active && ['noir', 'minimalist', 'cinematic'].includes(active)) {
       setTheme(active);
-    } else {
-      fetch('/api/theme')
-        .then((res) => res.json())
-        .then((data) => {
-          if (data?.activeTheme && ['noir', 'minimalist', 'cinematic'].includes(data.activeTheme)) {
-            setTheme(data.activeTheme);
-          }
-        })
-        .catch(() => {});
     }
-  }, []);
+  }, [companyData?.activeTheme]);
 
   return (
     <div className={theme === 'minimalist' ? 'theme-minimalist' : 'theme-dark'}>
