@@ -184,15 +184,17 @@ export default function BeforeAfterSlider() {
                 />
               </div>
 
-              {/* Badges on Top of Images */}
-              <div className="absolute top-5 left-5 z-20 pointer-events-none">
-                <span className="px-3 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-xs text-neutral-300 uppercase tracking-widest font-medium">
-                  {activeItem.beforeLabel}
+              {/* Badges on Top of Images (Responsive & Non-overlapping) */}
+              <div className="absolute top-3 sm:top-5 left-3 sm:left-5 z-20 pointer-events-none">
+                <span className="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-black/85 backdrop-blur-md border border-white/20 text-[10px] sm:text-xs text-neutral-200 uppercase tracking-wider sm:tracking-widest font-medium shadow-lg">
+                  <span className="sm:hidden">Before</span>
+                  <span className="hidden sm:inline">{activeItem.beforeLabel}</span>
                 </span>
               </div>
-              <div className="absolute top-5 right-5 z-20 pointer-events-none">
-                <span className="px-3 py-1.5 rounded-full bg-[#C5A880]/90 backdrop-blur-md border border-[#DFC29A]/40 text-xs text-black uppercase tracking-widest font-semibold">
-                  {activeItem.afterLabel}
+              <div className="absolute top-3 sm:top-5 right-3 sm:right-5 z-20 pointer-events-none">
+                <span className="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-[#C5A880] backdrop-blur-md border border-[#DFC29A]/50 text-[10px] sm:text-xs text-black uppercase tracking-wider sm:tracking-widest font-semibold shadow-lg">
+                  <span className="sm:hidden">After</span>
+                  <span className="hidden sm:inline">{activeItem.afterLabel}</span>
                 </span>
               </div>
 
@@ -205,13 +207,13 @@ export default function BeforeAfterSlider() {
                 <div className="absolute top-0 bottom-0 -left-[1px] w-[2px] bg-[#C5A880] shadow-[0_0_15px_#C5A880]" />
 
                 {/* Draggable Handle Button */}
-                <div className="absolute top-1/2 -left-6 -translate-y-1/2 w-12 h-12 rounded-full bg-[#C5A880] text-black shadow-2xl flex items-center justify-center font-bold text-xs pointer-events-auto cursor-ew-resize hover:scale-110 active:scale-95 transition-transform border-2 border-white">
+                <div className="absolute top-1/2 -left-5 sm:-left-6 -translate-y-1/2 w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-[#C5A880] text-black shadow-2xl flex items-center justify-center font-bold text-xs pointer-events-auto cursor-ew-resize hover:scale-110 active:scale-95 transition-transform border-2 border-white">
                   <span className="tracking-tighter">⟨ ⟩</span>
                 </div>
               </div>
 
               {/* Bottom Instruction Pill */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none px-4 py-1.5 rounded-full bg-black/70 backdrop-blur-md text-[11px] text-neutral-400 uppercase tracking-wider border border-white/10">
+              <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-black/80 backdrop-blur-md text-[9px] sm:text-[11px] text-neutral-300 uppercase tracking-wider border border-white/10 whitespace-nowrap shadow-md">
                 Drag slider to compare transformation
               </div>
             </div>
