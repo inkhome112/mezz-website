@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, MapPin, Calendar, LayoutDashboard, Plus, ChevronRight, Sparkles, Images } from 'lucide-react';
 import LightboxModal from '../LightboxModal';
+import BeforeAfterSlider from '../BeforeAfterSlider';
 
 export default function MinimalistView({ projects = [], company }) {
   const [activeTab, setActiveTab] = useState('All');
@@ -231,6 +232,9 @@ export default function MinimalistView({ projects = [], company }) {
           ))}
         </div>
       </section>
+
+      {/* Before & After Transformations */}
+      <BeforeAfterSlider />
 
       {/* About Section */}
       <section id="about" className="py-24 px-6 md:px-12 bg-white border-t border-[#E8E6DF]">

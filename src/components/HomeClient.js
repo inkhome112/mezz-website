@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ProjectGrid from '@/components/ProjectGrid';
 import StatsCounter from '@/components/StatsCounter';
+import BeforeAfterSlider from '@/components/BeforeAfterSlider';
 import AboutSection from '@/components/AboutSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -52,6 +53,7 @@ export default function HomeClient({ projectsData, companyData }) {
           <Hero />
           <StatsCounter stats={companyData.stats} />
           <ProjectGrid projects={projectsData} />
+          <BeforeAfterSlider />
           <AboutSection about={companyData.about} />
           <ContactSection contact={companyData.contact} />
           <Footer />

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, ArrowUpRight, LayoutDashboard, Images, MapPin, Sparkles } from 'lucide-react';
 import LightboxModal from '../LightboxModal';
+import BeforeAfterSlider from '../BeforeAfterSlider';
 
 export default function CinematicView({ projects = [], company }) {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -201,6 +202,9 @@ export default function CinematicView({ projects = [], company }) {
           ))}
         </div>
       </section>
+
+      {/* Before & After Transformations */}
+      <BeforeAfterSlider />
 
       {/* Lightbox */}
       <LightboxModal
