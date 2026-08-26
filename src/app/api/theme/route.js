@@ -5,23 +5,16 @@ import path from 'path';
 
 const CLOUD_STORE_URL = 'https://api.restful-api.dev/objects/ff8081819ff5b11001a038425ca41b23';
 
-// In-memory server-side cache to prevent repeated external network calls
-let inMemoryTheme = null;
-
 export async function getGlobalTheme() {
-  // 1. Check in-memory cache first
-  if (inMemoryTheme && ['noir', 'minimalist', 'cinematic'].includes(inMemoryTheme)) {
-    return inMemoryTheme;
-  }
-
-  // 2. Read from persistent cloud store
   try {
-    const res = await fetch(CLOUD_STORE_URL, { cache: 'no-store', signal: AbortSignal.timeout(3000) });
+    const res = await fetch(CLOUD_STORE_URL, {
+      cache: 'no-store',
+      next: { revalidate: 0 }
+    });
     if (res.ok) {
       const json = await res.json();
       const theme = json?.data?.activeTheme;
       if (['noir', 'minimalist', 'cinematic'].includes(theme)) {
-        inMemoryTheme = theme;
         return theme;
       }
     }
@@ -29,25 +22,21 @@ export async function getGlobalTheme() {
     console.error('Error fetching global theme from cloud store:', e.message);
   }
 
-  // 3. Read from company.json as fallback
+  // Fallback to local company.json without polluting in-memory state
   try {
     const companyPath = path.join(process.cwd(), 'src', 'data', 'company.json');
     if (fs.existsSync(companyPath)) {
       const data = JSON.parse(fs.readFileSync(companyPath, 'utf8'));
       if (data?.activeTheme && ['noir', 'minimalist', 'cinematic'].includes(data.activeTheme)) {
-        inMemoryTheme = data.activeTheme;
         return data.activeTheme;
       }
     }
   } catch (e) {}
 
-  return inMemoryTheme || 'noir';
+  return 'noir';
 }
 
 export async function setGlobalTheme(theme) {
-  inMemoryTheme = theme;
-
-  // 1. Update cloud store
   try {
     await fetch(CLOUD_STORE_URL, {
       method: 'PUT',
@@ -57,13 +46,12 @@ export async function setGlobalTheme(theme) {
         data: { activeTheme: theme }
       }),
       cache: 'no-store',
-      signal: AbortSignal.timeout(4000)
+      next: { revalidate: 0 }
     });
   } catch (e) {
     console.error('Failed to update cloud store:', e.message);
   }
 
-  // 2. Update local file
   try {
     const companyPath = path.join(process.cwd(), 'src', 'data', 'company.json');
     if (fs.existsSync(companyPath)) {
@@ -76,7 +64,6 @@ export async function setGlobalTheme(theme) {
 
 export async function GET(request) {
   try {
-    // Check if user has cookie
     const cookieStore = await cookies();
     const cookieTheme = cookieStore.get('mezz_public_theme')?.value;
 
@@ -97,7 +84,6 @@ export async function GET(request) {
 
     return response;
   } catch (err) {
-    // If an error occurs, do not send a fake 'noir' response that breaks the UI
     return NextResponse.json({ success: false, message: err.message }, { status: 500 });
   }
 }
