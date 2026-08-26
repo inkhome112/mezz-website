@@ -18,26 +18,10 @@ export default function HomeClient({ projectsData, companyData }) {
   const [theme, setTheme] = useState(companyData?.activeTheme || 'noir');
 
   useEffect(() => {
-    // Keep theme state synchronized with server when user switches in admin
-    const checkTheme = () => {
-      fetch('/api/theme')
-        .then((res) => res.json())
-        .then((data) => {
-          if (data?.activeTheme && ['noir', 'minimalist', 'cinematic'].includes(data.activeTheme)) {
-            setTheme(data.activeTheme);
-          }
-        })
-        .catch(() => {});
-    };
-
-    checkTheme();
-    window.addEventListener('focus', checkTheme);
-    const interval = setInterval(checkTheme, 3000);
-    return () => {
-      window.removeEventListener('focus', checkTheme);
-      clearInterval(interval);
-    };
-  }, []);
+    if (companyData?.activeTheme && ['noir', 'minimalist', 'cinematic'].includes(companyData.activeTheme)) {
+      setTheme(companyData.activeTheme);
+    }
+  }, [companyData?.activeTheme]);
 
   return (
     <div className={theme === 'minimalist' ? 'theme-minimalist' : 'theme-dark'}>
